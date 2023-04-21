@@ -22,11 +22,11 @@ const server = z.object({
   // DISCORD_CLIENT_ID: z.string(),
   // DISCORD_CLIENT_SECRET: z.string(),
 
-  GITHUB_CLIENT_ID_DEV: z.string(),
-  GITHUB_CLIENT_SECRET_DEV: z.string(),
+  // GITHUB_CLIENT_ID_DEV: z.string(),
+  // GITHUB_CLIENT_SECRET_DEV: z.string(),
 
-  // GITHUB_CLIENT_ID_PROD: z.string(),
-  // GITHUB_CLIENT_SECRET_PROD: z.string(),
+  GITHUB_CLIENT_ID_PROD: z.string(),
+  GITHUB_CLIENT_SECRET_PROD: z.string(),
 });
 
 /**
@@ -48,8 +48,8 @@ const processEnv = {
   NODE_ENV: process.env.NODE_ENV,
   NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
   NEXTAUTH_URL: process.env.NEXTAUTH_URL,
-  GITHUB_CLIENT_ID_DEV: process.env.GITHUB_CLIENT_ID_DEV,
-  GITHUB_CLIENT_SECRET_DEV: process.env.GITHUB_CLIENT_SECRET_DEV,
+  GITHUB_CLIENT_ID_PROD: process.env.GITHUB_CLIENT_ID_PROD,
+  GITHUB_CLIENT_SECRET_PROD: process.env.GITHUB_CLIENT_SECRET_DEV,
   // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
 };
 
