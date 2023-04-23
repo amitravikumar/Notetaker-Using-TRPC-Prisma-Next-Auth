@@ -1,7 +1,6 @@
-import { Input } from "postcss";
 import { z } from "zod";
 
-import { createTRPCRouter, protectedProcedure } from "~/server/api/trpc";
+import { createTRPCRouter, protectedProcedure } from "../trpc";
 
 export const topicRouter = createTRPCRouter({
   getAll: protectedProcedure.query(({ ctx }) => {
@@ -14,7 +13,7 @@ export const topicRouter = createTRPCRouter({
 
   create: protectedProcedure
     .input(z.object({ title: z.string() }))
-    .query(({ ctx, input }) => {
+    .mutation(({ ctx, input }) => {
       return ctx.prisma.topic.create({
         data: {
           title: input.title,
